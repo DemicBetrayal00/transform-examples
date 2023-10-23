@@ -137,6 +137,7 @@
     <ClInclude Include="GLFW\glfw3.h" />
     <ClInclude Include="GLFW\glfw3native.h" />
     <ClInclude Include="GL\glew.h" />
+    <ClInclude Include="Mountain.h" />
     <ClInclude Include="PlanetSystem.h" />
     <ClInclude Include="RandomStars.h" />
     <ClInclude Include="star-vbo.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlanetSystem.cpp" />
     <ClCompile Include="RandomStars.cpp" />
+    <ClCompile Include="Mountain.cpp" />
     <ClCompile Include="star-vbo.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
   </ItemGroup>

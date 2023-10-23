@@ -4,6 +4,7 @@
 #include "star-vbo.h"
 #include "RandomStars.h"
 #include "PlanetSystem.h"
+#include "Mountain.h"
 
 using namespace std;
 using namespace glm;
@@ -12,6 +13,7 @@ using namespace glm;
 // global variables
 StarField stars = StarField();
 SimplePlanetSystem planets = SimplePlanetSystem();
+MountainousScene mountain = MountainousScene();
 
 // Window size
 const unsigned int initWidth = 512;
@@ -76,6 +78,8 @@ int main() {
 
 	stars.initialiseStarfield(200);
 	planets.initialise(0.5f, 3.0f, radians(0.01f), radians(0.05f));
+	mountain.initialise(3.0f);
+
 
 
 	//
@@ -105,7 +109,7 @@ void renderScene()
 
 	mat4 orthoProjection = ortho(-8.0f, 8.0f, -8.0f, 8.0f);
 
-	stars.render(orthoProjection);
+	mountain.render(orthoProjection);
 }
 
 
@@ -143,6 +147,8 @@ void keyboardHandler(GLFWwindow* window, int key, int scancode, int action, int 
 
 // Function called to animate elements in the scene
 void updateScene() {
+
+	planets.update();
 
 }
 
